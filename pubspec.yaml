@@ -1,0 +1,53 @@
+name: zeus_card
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  flutter_screenutil: ^5.9.0
+  responsive_framework: ^1.4.0
+  go_router: ^13.2.4
+  get_it: ^7.7.0
+  internet_connection_checker: ^1.0.0+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/translations/
+    - assets/fonts/
+    - assets/images/
+    - assets/svg/
+
+
+  fonts:
+    - family: poppins
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-Regular.ttf
+        - asset: assets/fonts/poppins/Poppins-Bold.ttf
+          weight: 700
+    - family: bungee
+      fonts:
+        - asset: assets/fonts/bungee/BungeeSpice-Regular.ttf
+    - family: lora
+      fonts:
+        - asset: assets/fonts/lora/Lora-Regular.ttf
+        - asset: assets/fonts/lora/Lora-Bold.ttf
+          weight: 700
+    - family: metrophobic
+      fonts:
+        - asset: assets/fonts/Metrophobic/Metrophobic-Regular.ttf
+    - family: bahij
+      fonts:
+        - asset: assets/fonts/bahij/bahij.ttf
+
