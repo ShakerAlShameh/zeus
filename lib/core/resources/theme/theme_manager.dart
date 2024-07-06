@@ -274,6 +274,14 @@ class ThemeManager {
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
+        padding: MaterialStateProperty.resolveWith<EdgeInsetsGeometry>(
+            (Set<MaterialState> states) {
+          if (states.contains(MaterialState.hovered)) {
+            return const EdgeInsets.all(11);
+          } else {
+            return const EdgeInsets.all(10);
+          }
+        }),
         backgroundColor: MaterialStateProperty.resolveWith<Color>(
           (Set<MaterialState> states) {
             if (states.contains(MaterialState.disabled)) {
@@ -353,7 +361,7 @@ class ThemeManager {
               } else if (states.contains(MaterialState.pressed)) {
                 return ColorLightManager.primarySwatch.shade300;
               }
-              return Colors.transparent;
+              return ColorLightManager.primaryColor;
             },
           ),
           overlayColor: MaterialStateProperty.resolveWith<Color>(
@@ -363,7 +371,7 @@ class ThemeManager {
               } else if (states.contains(MaterialState.pressed)) {
                 return ColorLightManager.primarySwatch.shade300;
               }
-              return ColorLightManager.surface;
+              return ColorLightManager.primaryColor;
             },
           ),
           foregroundColor: MaterialStateProperty.resolveWith<Color>(
@@ -426,9 +434,9 @@ class ThemeManager {
               if (states.contains(MaterialState.disabled)) {
                 return Colors.transparent;
               } else if (states.contains(MaterialState.hovered)) {
-                return ColorLightManager.primarySwatch.shade100;
+                return Colors.blue;
               } else if (states.contains(MaterialState.pressed)) {
-                return ColorLightManager.primarySwatch.shade300;
+                return Colors.blue;
               }
               return Colors.transparent;
             },
@@ -436,9 +444,9 @@ class ThemeManager {
           overlayColor: MaterialStateProperty.resolveWith<Color>(
             (Set<MaterialState> states) {
               if (states.contains(MaterialState.hovered)) {
-                return ColorLightManager.primarySwatch;
+                return Colors.blue;
               } else if (states.contains(MaterialState.pressed)) {
-                return ColorLightManager.primarySwatch;
+                return Colors.blue;
               }
               return ColorLightManager.surface;
             },
